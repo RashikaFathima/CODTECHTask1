@@ -1,0 +1,289 @@
+/* imp! CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+/* imp! CSS Vraiable Declaration */
+:root{
+    --dark-black:#030303;
+    --pure-white:#ffffff;
+    --sky-blue:#0D6EFD;
+    --grey:#686868;
+    --h1-font: 7rem;
+    --h2-font: 3.2rem;
+    --h3-font: 2.8rem;
+    --h4-font: 2.4rem;
+    --font-20px: 2rem;
+    --h5-font: 1.8rem;
+    --p-font: 1.6rem;
+    --font-segoe-UI: 'segoe UI';
+
+}
+/*imp! Body and common CSS */
+body{
+    font-family: 'poppins';
+}
+.h1,.h2,.h3,.h4,.h5,.h6,h1,h2,h3,h4,h5,h6{
+    margin-bottom: 0;
+}
+.dark-black{
+    background-color: var(--dark-black);
+}
+.dark-black-text{
+    color:var(--dark-black);
+}
+.fw-600{
+    font-weight: 600;
+}
+.grey-clr{
+    color: var(--grey);
+}
+h1{
+    font-size: var(--h1-font);
+}
+
+h2{
+    font-size: var(--h2-font);
+}
+h3{
+    font-size: var(--h3-font);
+}
+h4{
+    font-size: var(--h4-font);
+}
+h5{
+    font-size: var(--h5-font);
+}
+p,.p-font-size{
+    font-size: var(--p-font);
+}
+.segoe-font{
+    font-family: var(--font-segoe-UI);
+}
+.mt-100{
+    margin: 10rem;
+}
+/* imp! Selection-1 (Navbar Section) */
+.nav-link{
+    font-size: var(--p-font);
+    padding: 1rem 0.2rem;
+    position: relative;
+}
+.nav-link::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0.15rem;
+    background-color: var(--pure-white);
+    bottom: 0.2rem;
+    left: 0;
+    visibility: hidden;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+.nav-link:hover::before,.nav-link:active::before{
+    width: 100%;
+    visibility: visible;
+}
+.navbar-toggler .fa-solid.fa-bars{
+    font-size: 2rem;
+}
+/* imp! Section-2 (Hero Section) */
+.hero-section{
+    background-image: url(../img/hero\ section/myphoto.png);
+    background-color: var(--dark-black);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: -5rem;
+    z-index: 1;
+
+}
+.hero-section-overlay{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.9));
+    z-index:-1;
+}
+.hero-section .container{
+    height: 86vh;
+}
+/* imp! Section-3(About Section) */
+.about-section{
+    padding: 5rem 0;
+
+}
+.about-section .container{
+    box-shadow: 0 0.2rem 1.5rem rgba(0,0,0,0.1);
+    padding: 3rem;
+}
+.Skills-main-div .Skills-div span{
+    font-size: 1.3rem;
+}
+.blue-line{
+    width: 5rem;
+    height: 0.3rem;
+    background-color: var(--sky-blue);
+    border-radius: 1rem;
+    margin: 1.5rem 0;
+}
+/* imp! Section-4 (Resume Srction) */
+.resume-item{
+    position: relative;
+    border-left: 0.2rem solid var(--sky-blue);
+}
+.resume-item::before{
+    content: '';
+    position: absolute;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 5rem;
+    background-color: var(--pure-white);
+    border: 0.2rem solid var(--sky-blue);
+    top: 0;
+    left: -0.9rem;
+}
+.resume-item .year{
+    font-size: var(--p-font);
+}
+
+/* imp! Section-5(Services Section) */
+.service-item{
+    padding: 6rem 3rem;
+    box-shadow: 0 0.5rem 9rem color-mix(in srgb, var(--grey), trasparent 90%);
+    border-bottom: 0.5rem solid var(--pure-white);
+    border-radius: 1.8rem;
+    transition: all 0.3s ease-in-out;
+}
+.service-item .icon{
+    color: var(--pure-white);
+    background: var(--sky-blue);
+    width: 6.4rem;
+    height: 6.4rem;
+    border-radius: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: var(--font-20px);
+}
+.service-item h4{
+    margin: 1rem 0 1.5rem;
+}
+.service-item:hover{
+    transform: translateY(-1rem);
+    border-color: var(--sky-blue);
+    cursor: pointer;
+}
+.myproject-btn{
+    padding: 1rem 3rem;
+    background-color: var(--sky-blue);
+    color: var(--pure-white);
+    opacity: 0.65;
+    transition: 0.5s;
+}
+.myproject-btn:hover{
+    background-color: var(--sky-blue);
+    color: var(--pure-white);
+    opacity: 1;
+}
+
+/* imp! Section-6(contact Section) */
+form{
+    box-shadow: 0 0 2rem color-mix(in srgb, var(--grey));
+}
+input,textarea, .submit-btn{
+    font-size: var(--p-font) !important;
+}
+::placeholder{
+    opacity: 0.5 !important;
+}
+.contact-section textarea{
+    resize: none;
+}
+.submit-btn{
+    padding: 1rem 3rem;
+    background-color: var(--sky-blue);
+    color: var(--pure-white);
+    opacity: 0.65;
+    transition: 0.5s;
+}
+.submit-btn:hover{
+    background-color: var(--sky-blue);
+    color: var(--pure-white);
+    opacity: 1;
+}
+.thank-you-msg{
+    font-family: var(--font-segoe-UI);
+    
+}
+/* imp! Section-7(footer Section) */
+.footer-section{
+    background-color: var(--sky-blue);
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.social-icons{
+    display: flex;
+    gap: 2rem;
+}
+.social-icons i{
+    color: var(--pure-white);
+    font-size: 1.8rem;
+    width: 5rem;
+    height: 5rem;
+    border: 0.1rem solid var(--pure-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* imp! Media query */
+/* imp! Tablet Screen */
+@media (max-width:992px){
+    :root{
+        --h2-font:5rem;
+        --h2-font:3rem;
+    
+    }
+    .mt-100{
+        margin-top: 8rem;
+    }
+    .nav-link:hover::before, .nav-line.acttive::before{
+        visibility: hidden;
+    }
+}
+@media (max-width:600px){
+    :root{
+        --h1-font:3.5rem;
+        --h2-font:2.2rem;
+        --h1-font:2rem;
+    }
+    .mt-100{
+        margin-top: 7rem;
+    }
+    .about-section{
+        padding: 0;
+    }
+    .footer-section{
+        padding: 3rem;
+    }
+    .copyright-txt{
+        font-size: 1.4rem;
+    }
+    .social-icons i{
+        width:4rem;
+        height: 4rem;
+        font-size: 1.4rem;
+    }
+}
+
+
+
